@@ -4,4 +4,6 @@ fun main() {
     val student2 = Student()
 
     Student.studentsInfo()
+
+    Student.listStudentDatabase()
 }

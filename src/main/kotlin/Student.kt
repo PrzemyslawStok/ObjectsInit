@@ -22,5 +22,9 @@ class Student(name: String = "Przemysław", surname: String = "Stokłosa"){
         fun studentsInfo(){
             println("Liczba studentów w bazie: $noStudents")
         }
+
+        fun listStudentDatabase(){
+            studentsDatabase.forEach{println(it.toString())}
+        }
     }
 }
