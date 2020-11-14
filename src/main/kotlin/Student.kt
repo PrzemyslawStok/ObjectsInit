@@ -1,8 +1,8 @@
-class Student(name: String, surname: String){
+class Student(name: String = "Przemysław", surname: String = "Stokłosa"){
     var array: Array<Int>
     var weight: Double = 0.0
 
-    constructor(weight: Double){
+    constructor(weight: Double):this("Przemysław","Stokłosa"){
         this.weight = weight
     }
 
