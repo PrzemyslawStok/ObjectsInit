@@ -3,8 +3,12 @@ class Student(name: String = "Przemysław", surname: String = "Stokłosa"){
     var weight: Double = 0.0
     var myNo: Int = 0
 
+    lateinit var info: String
+
     constructor(weight: Double):this("Przemysław","Stokłosa"){
         this.weight = weight
+
+        info = "zamowienia w stołówce"
     }
 
     init{
@@ -13,6 +17,8 @@ class Student(name: String = "Przemysław", surname: String = "Stokłosa"){
         myNo = noStudents+1
         noStudents++
         studentsDatabase.add(this)
+
+        info = ""
     }
 
     companion object{
@@ -26,5 +32,9 @@ class Student(name: String = "Przemysław", surname: String = "Stokłosa"){
         fun listStudentDatabase(){
             studentsDatabase.forEach{println(it.toString())}
         }
+    }
+
+    override fun toString(): String {
+        return "Student(weight=$weight, myNo=$myNo)"
     }
 }
