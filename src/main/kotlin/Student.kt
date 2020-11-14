@@ -4,6 +4,7 @@ class Student(name: String = "Przemysław", surname: String = "Stokłosa"){
     var myNo: Int = 0
 
     lateinit var info: String
+    var info1:String? = null
 
     constructor(weight: Double):this("Przemysław","Stokłosa"){
         this.weight = weight
@@ -35,6 +36,9 @@ class Student(name: String = "Przemysław", surname: String = "Stokłosa"){
     }
 
     override fun toString(): String {
+        info1?.let{
+            println(info1)
+        }
         return "Student(weight=$weight, myNo=$myNo)"
     }
 }
