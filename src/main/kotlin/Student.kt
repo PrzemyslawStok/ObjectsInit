@@ -12,10 +12,12 @@ class Student(name: String = "Przemysław", surname: String = "Stokłosa"){
         println("init...")
         myNo = noStudents+1
         noStudents++
+        studentsDatabase.add(this)
     }
 
     companion object{
         var noStudents = 0
+        var studentsDatabase = mutableListOf<Student>()
 
         fun studentsInfo(){
             println("Liczba studentów w bazie: $noStudents")
