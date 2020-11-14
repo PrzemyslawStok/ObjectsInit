@@ -18,7 +18,7 @@ class Student(name: String = "Przemysław", surname: String = "Stokłosa"){
         noStudents++
         studentsDatabase.add(this)
 
-        info = ""
+        //info = ""
     }
 
     companion object{
